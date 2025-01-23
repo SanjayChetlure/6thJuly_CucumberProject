@@ -67,6 +67,31 @@ public class LoginSteps
 	{
 		System.out.println("Profile picture visible");
 	}
+	
+	
+	@Then("get title & verify")
+	public void get_title_verify() 
+	{
+	   System.out.println("--title verified--");
+	}
+
+	@When("user click on profile tab")
+	public void user_click_on_profile_tab() 
+	{
+	    System.out.println("click on profile tab");
+	}
+
+	@Then("verify profile name")
+	public void verify_profile_name() 
+	{
+	   System.out.println("---Profile name verified--");
+	}
+
+	@Then("user click on logout btn")
+	public void user_click_on_logout_btn()
+	{
+	    System.out.println("--logged out from app---");
+	}
 
 
 }
