@@ -92,6 +92,13 @@ public class LoginSteps
 	{
 	    System.out.println("--logged out from app---");
 	}
+	
+	
+	@Then("url should contain {string}")
+	public void url_should_contain(String string) 
+	{
+		System.out.println("URL: "+string);
+	}
 
 
 }
