@@ -1,6 +1,7 @@
 package Steps;
 
 import java.util.List;
+import java.util.Map;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -20,13 +21,18 @@ public class AccountSteps
 	@When("user enters following data")
 	public void user_enters_following_data(DataTable dt) 
 	{
-		List<List<String>> data = dt.asLists();
-		String info = data.get(3).get(3);
-		System.out.println("==="+info);
+//		List<List<String>> data = dt.asLists();
+//		String info = data.get(3).get(3);
+//		System.out.println("==="+info);
+//		System.out.println(data.get(1).get(1));
+//		System.out.println(data.get(2).get(1));
 		
-		System.out.println(data.get(1).get(1));
-		System.out.println(data.get(2).get(1));
+		List<Map<String, String>> data = dt.asMaps();
+		String info = data.get(0).get("FN");
+		System.out.println(info);
 		
+		System.out.println(data.get(1).get("Mob Num"));
+		System.out.println(data.get(2).get("Mob Num"));
 	}
 
 	@When("user click on submit btn")

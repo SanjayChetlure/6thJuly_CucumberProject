@@ -9,3 +9,6 @@ When user enters following data
 | abc3 | xyz3 | abc3@gmail.com | 1111111111|
 And user click on submit btn
 Then user get created
+
+
+
