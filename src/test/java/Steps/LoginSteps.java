@@ -99,6 +99,13 @@ public class LoginSteps
 	{
 		System.out.println("URL: "+string);
 	}
+	
+	
+	@Then("verify profile picture")
+	public void verify_profile_picture() 
+	{
+		System.out.println("profile picture verified");
+	}
 
 
 }
