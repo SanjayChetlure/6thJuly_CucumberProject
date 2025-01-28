@@ -1,5 +1,7 @@
 package Steps;
 
+import org.testng.Assert;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -40,6 +42,7 @@ public class LoginSteps
 	public void title_of_app_should_be_visible() 
 	{
 	    System.out.println("--title visible---");
+//	    Assert.assertEquals("Hi", "Hello","Failed: both results are mismatch");
 	}
 	
 	
