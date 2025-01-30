@@ -8,6 +8,7 @@ import LibraryFiles.DriverFactory;
 import LibraryFiles.UtilityClass;
 import Module1_Login.SwagLabHomePage;
 import Module1_Login.SwagLabLoginPage;
+import Module1_Login.SwagLabOpenMenuPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -16,6 +17,7 @@ public class RE1_LoginSteps
 {
 	SwagLabLoginPage login=new SwagLabLoginPage(DriverFactory.driver);
 	SwagLabHomePage home=new SwagLabHomePage(DriverFactory.driver);
+	SwagLabOpenMenuPage openMenu=new SwagLabOpenMenuPage(DriverFactory.driver);
 	
 	@Given("user should be at login")
 	public void user_should_be_at_login() throws IOException 
@@ -46,6 +48,18 @@ public class RE1_LoginSteps
 	{
 	   String actLogoText = home.getSwagLabHomePageLogoText();
 	   Assert.assertEquals(actLogoText, expLogoText, "Failed- logo Text mismatch");
+	}
+	
+	@When("user click on openMenu button")
+	public void user_click_on_open_menu_button() 
+	{
+		home.clickSwagLabHomePageOpenMenu();
+	}
+
+	@When("user click on logout button")
+	public void user_click_on_logout_button()
+	{
+	   openMenu.clickSwagLabOpenMenuPageLogoutBtn();
 	}
 
 }
